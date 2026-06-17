@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Background Generator</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- 入力エリア -->
+        <section class="form-area">
+            <h1>背景画像作成</h1>
+
+            <div class="form-group">
+                <label for="position">役職</label>
+                <input type="text" id="position" placeholder="例：代表取締役CEO">
+            </div>
+
+            <div class="form-group">
+                <label for="kanji-name">漢字名</label>
+                <input type="text" id="kanji-name" placeholder="例：田中 太郎">
+            </div>
+
+            <div class="form-group">
+                <label for="kana-name">ひらがな名</label>
+                <input type="text" id="kana-name" placeholder="例：たなか たろう">
+            </div>
+
+            <button id="download-btn">
+                <img src="images/ダウンロードマーク.png" alt="ダウンロード">
+                PNGダウンロード
+            </button>
+        </section>
+
+        <!-- プレビューエリア -->
+        <section class="preview-area">
+            <div class="preview-wrapper">
+
+                <img src="images/テンプレート.png" alt="背景画像" class="background-image">
+
+                <div class="name-area">
+
+                    <div id="preview-kanji" class="preview-kanji">
+                    </div>
+
+                    <div id="preview-kana" class="preview-kana">
+                    </div>
+
+                    <div id="preview-position" class="preview-position">
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
