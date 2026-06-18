@@ -62,27 +62,30 @@ function downloadImage() {
         // 背景描画
         ctx.drawImage(backgroundImage, 0, 0, 2560, 1440);
 
-        // プレビュー(800px) → 出力(2560px) の倍率
-        const scale = 2560 / 800;
+        // プレビュー1200px基準
+        const scale = 2560 / 1200;
 
         // 文字色
         ctx.fillStyle = "#000";
 
         // 右寄せ
         ctx.textAlign = "right";
-
-        // 追加
         ctx.textBaseline = "top";
 
         // CSSの right:25px を2560px基準へ変換
         const textX = 2560 - (25 * scale);
+
+        // CSSの top:100px に合わせる
+        const kanjiY = 100 * scale;
+        const kanaY = 160 * scale;
+        const positionY = 190 * scale;
 
         // 漢字名
         ctx.font = `bold ${48 * scale}px "Noto Sans JP"`;
         ctx.fillText(
             kanjiInput.value,
             textX,
-            55 * scale
+            kanjiY
         );
 
         // ひらがな名
@@ -90,7 +93,7 @@ function downloadImage() {
         ctx.fillText(
             kanaInput.value,
             textX,
-            115 * scale
+            kanaY
         );
 
         // 役職
@@ -98,7 +101,7 @@ function downloadImage() {
         ctx.fillText(
             positionInput.value,
             textX,
-            150 * scale
+            positionY
         );
 
         // ダウンロード

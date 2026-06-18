@@ -108,7 +108,7 @@ body {
 .preview-wrapper {
     position: relative;
     width: 100%;
-    max-width: 800px;
+    max-width: 1200px;
 }
 
 .background-image {
@@ -118,31 +118,32 @@ body {
 
 .name-area {
     position: absolute;
-    top: 55px;
-    right: 25px;
+
+    top: 100px;
+    right: 40px;
 
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 
-    gap: 8px;
+    gap: 12px;
 }
 
 .preview-kanji {
-    font-size: 48px;
+    font-size: 42px;
     font-weight: 700;
     line-height: 1;
     color: #000;
 }
 
 .preview-kana {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1;
     color: #000;
 }
 
 .preview-position {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     line-height: 1;
     color: #000;
